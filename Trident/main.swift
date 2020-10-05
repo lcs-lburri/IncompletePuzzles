@@ -24,6 +24,10 @@ print("Enter tine spacing:")
 print("   ", terminator: "")
 let spacing = Int(readLine()!)!
 
+print("Enter handle length:")
+print("   ", terminator: "")
+let handle = Int(readLine()!)!
+
 // OUTPUT
 
 // Produce top of trident according to length given
@@ -37,11 +41,39 @@ for _ in 1...tineLength {
         // Print space between tines
         for _ in 1...spacing {
             print(" ", terminator: "")
+            
+            
         }
         
+        
+        
     }
-    // Go to next line of output
+    
+    //  Go to next line
     print("")
+    
+    
+    
 }
 
+// the part that joins the tines
+for _ in 1...(3 + spacing * 2) {
+    print("*", terminator: "")
+}
+//  Go to next line
+print("")
+
+
+// make the line of code under equal the amount of stars in the handle
+for _ in 1...handle {
+ 
+    // print enough spaces so that the handle is directly below the middle tine
+    for _ in 1...spacing + 1 {
+        print(" ", terminator: "")
+    }
+    
+    // draw a star directly under middle tine
+    print("*")
+    
+}
 
