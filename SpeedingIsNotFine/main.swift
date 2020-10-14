@@ -4,8 +4,8 @@
 //
 //  Puzzle description available at:
 //
-//  https://www.russellgordon.ca/incomplete-puzzles/speeding-is-not-fine.pdf
 //
+//https://www.russellgordon.ca/incomplete-puzzles/speeding-is-not-fine.pdf
 //  NOTE: Puzzle adapted from material provided by the University of Waterloo.
 
 import Foundation
@@ -19,7 +19,8 @@ print("====================")
 print("What is the speed limit, in km/h? ", terminator: "")
 let limit = Int(readLine()!)!
 
-let speed = 45
+print("What is the speed of the car in km/h? ", terminator: "")
+let speed = Int(readLine()!)!
 
 // PROCESS AND OUTPUT
 
@@ -27,5 +28,12 @@ let speed = 45
 if speed < limit {
     print("Congratulations, you are within the speed limit!")
 } else {
-    print("You are speeding.")
+    // find a way to use limit to find the fines
+    // if limit + 20 = 100 $ fine
+    // if limit + 21 to 30 = 270 $ fine
+    // if limit + 31 to ... = 500 $ fine
+    
+
+    print("You are speeding and your fine is.")
+    
 }
