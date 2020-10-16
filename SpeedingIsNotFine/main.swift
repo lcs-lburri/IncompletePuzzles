@@ -24,16 +24,30 @@ let speed = Int(readLine()!)!
 
 // PROCESS AND OUTPUT
 
+// calculate the difference between the speed and the limit
+let difference = speed - limit
+
 // See whether the driver is within the speed limit, and if they are not, see how much they are above the limit.
-if speed < limit {
+switch difference {
+case 1...20:
+    print ("Okay job but still over speed limit you are speeding and your fine is 100$")
+case 21...30:
+    print("You are speeding and your fine is 270$")
+case 31...:
+    print("you are going way over the speed limit your fine is 500$")
+default:
     print("Congratulations, you are within the speed limit!")
-} else {
-    // find a way to use limit to find the fines
+}
+
+//if speed < limit {
+//    print("Congratulations, you are within the speed limit!")
+//}
+//
+
+
+
+// find a way to use limit to find the fines
     // if limit + 20 = 100 $ fine
     // if limit + 21 to 30 = 270 $ fine
     // if limit + 31 to ... = 500 $ fine
     
-
-    print("You are speeding and your fine is.")
-    
-}
