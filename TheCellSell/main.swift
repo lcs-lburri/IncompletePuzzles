@@ -16,12 +16,12 @@ print("=============")
 // INPUT
 
 // Get daytime minutes
-print("Number of daytime minutes?")
-let day = Int(readLine()!)!
+var  day = Int.collectInput(withPrompt: "Number of daytime minutes", minimum: 0, maximum: nil)
+
 
 // Get evening minutes
-print("Number of evening minutes?")
-let evening = Int(readLine()!)!
+var evening = Int. collectInput(withPrompt: "number of evening minutes", minimum: 0, maximum: nil)
+
 
 // PROCESS
 

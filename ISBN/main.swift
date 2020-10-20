@@ -4,7 +4,7 @@
 //
 //  Puzzle description available at:
 //
-//  https://www.russellgordon.ca/incomplete-puzzles/speeding-is-not-fine.pdf
+//  https://www.russellgordon.ca/incomplete-puzzles/isbn.pdf
 //
 //  NOTE: Puzzle adapted from material provided by the University of Waterloo.
 
@@ -20,15 +20,33 @@ let first10Digits = "9780921418"
 
 // Set the sum of just the first 10 digits, which are always 9780921418
 // TODO: Use puzzle description to determine how much to subtract.
-let first10DigitsSum = 120 - 0
+var first10DigitsSum = 120 - (9 * 1 + 4 * 3 + 8 * 1)
 
 // Ask for the 11th digit
-print("Digit 11? ", terminator: "")
-let digit11 = Int(readLine()!)!
+let digit11 = Int.collectInput(withPrompt: "What is Digit 11? ",
+                               minimum: 0,
+                               maximum: 9)
 
-let digit12 = 7
+first10DigitsSum += digit11 * 1
 
-let digit13 = 9
+let digit12 = Int.collectInput(withPrompt: "What is digit 12? ",
+                               minimum: 0,
+                               maximum: 9)
+
+first10DigitsSum += digit12 * 3
+
+let digit13 = Int.collectInput(withPrompt: "What is digit 13? ",
+                               minimum: 0,
+                               maximum: 9)
+
+first10DigitsSum += digit13 * 1
+
+if first10DigitsSum /= 10 {
+    print("the 1-3 sum is ")
+    
+    
+    
+}
 
 // PROCESS & OUTPUT
 

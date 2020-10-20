@@ -15,13 +15,65 @@ print("====================")
 
 // INPUT
 
-// Ask for the speed limit
-print("What is the speed limit, in km/h? ", terminator: "")
-let limit = Int(readLine()!)!
 
-print("What is the speed of the car in km/h? ", terminator: "")
-let speed = Int(readLine()!)!
+//
+var limit = 0
 
+while true {
+    
+    
+    // prompt user
+    print("What is the speed limit, in km/h? ", terminator: "")
+    
+    // collect input
+    guard let givenInput = readLine() else {
+        continue
+    }
+    
+    // convert to interger
+    guard let givenInteger = Int(givenInput) else {
+        continue
+    }
+    
+    //check the value is positive
+    guard givenInteger > 0 else {
+        continue
+        
+    }
+    
+    limit = givenInteger
+    
+    break
+}
+
+var speed = 0
+
+while true {
+    
+    
+    // prompt user
+    print("What is the speed of the car in km/h? ", terminator: "")
+    
+    // collect input
+    guard let givenInput = readLine() else {
+        continue
+    }
+    
+    // convert to interger
+    guard let givenInteger = Int(givenInput) else {
+        continue
+    }
+    
+    //check the value is positive
+    guard givenInteger >= 0 else {
+        continue
+        
+    }
+    
+    speed = givenInteger
+    
+    break
+}
 // PROCESS AND OUTPUT
 
 // calculate the difference between the speed and the limit
@@ -47,7 +99,7 @@ default:
 
 
 // find a way to use limit to find the fines
-    // if limit + 20 = 100 $ fine
-    // if limit + 21 to 30 = 270 $ fine
-    // if limit + 31 to ... = 500 $ fine
-    
+// if limit + 20 = 100 $ fine
+// if limit + 21 to 30 = 270 $ fine
+// if limit + 31 to ... = 500 $ fine
+
